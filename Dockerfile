@@ -32,6 +32,10 @@ RUN apt-get -y install\
  clang-10-doc\
  lldb
 
+# install qemu for WeensyOS (sadly, this pulls in a lot of crap)
+RUN apt-get -y install\
+ qemu-system-x86
+
 # install programs used for system exploration
 RUN apt-get -y install\
  blktrace\
